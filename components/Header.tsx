@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { View, Text } from 'react-native';
 import GoAlert from './headerComponents/GoAlert';
 import GoCategories from './headerComponents/GoCategories';
-import GoLocation from './headerComponents/GoLocation';
+import GoAddress from './headerComponents/GoAddress';
 import GoSetting from './headerComponents/GoSetting';
 import SetClean from './headerComponents/SetClean';
 
@@ -17,10 +17,10 @@ function Header({ tab }: IHeader) {
       return (
         <View style={styles.container}>
           <View style={styles.wrapper}>
-            <Text style={styles.headerTitle}>홈</Text>
+            <GoAddress />
             <View style={styles.widgetWrapper}>
-              <GoLocation />
               <GoCategories />
+              <View style={styles.sep} />
               <GoAlert />
             </View>
           </View>
@@ -33,6 +33,7 @@ function Header({ tab }: IHeader) {
             <Text style={styles.headerTitle}>채팅</Text>
             <View style={styles.widgetWrapper}>
               <SetClean />
+              <View style={styles.sep} />
               <GoAlert />
             </View>
           </View>
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
     height: 80,
     paddingTop: 48,
     paddingHorizontal: 16,
-    backgroundColor: '#fafafa',
+    backgroundColor: '#fff',
   },
   wrapper: {
     flexDirection: 'row',
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     height: '100%',
     // borderBottomWidth: 1,
     borderBottomColor: '#7286D3',
-    backgroundColor: '#fafafa',
+    backgroundColor: '#fff',
   },
   widgetWrapper: {
     flexDirection: 'row',
@@ -88,6 +89,9 @@ const styles = StyleSheet.create({
     color: '#4D4D4D',
     fontSize: 24,
     fontWeight: 'bold',
+  },
+  sep: {
+    width: 8,
   },
 });
 
