@@ -6,7 +6,7 @@ interface IProfile {
   id: string;
 }
 
-function Profile({ id }: IProfile) {
+export default function Profile({ id }: IProfile) {
   const NN = 'https://via.placeholder.com/150/';
   const EE = '/000000';
   return (
@@ -81,5 +81,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-export default Profile;

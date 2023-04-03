@@ -7,7 +7,7 @@ import Header from '../../components/Header';
 import HomeList from '../../components/homeComponents/HomeList';
 import WriteButton from '../../components/homeComponents/WriteButton';
 
-function HomeTab() {
+export default function HomeTab() {
   return (
     <View>
       <Header tab="Home" />
@@ -24,5 +24,3 @@ const cstyle = StyleSheet.create({
     paddingBottom: 160,
   },
 });
-
-export default HomeTab;

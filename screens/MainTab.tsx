@@ -13,7 +13,7 @@ interface IconProps {
 
 const Tab = createBottomTabNavigator();
 
-function MainTab() {
+export default function MainTab() {
   const screenOptions = {
     tabBarActiveTintColor: '#7286D3',
     tabBarInactiveTintColor: '#777',
@@ -42,5 +42,3 @@ function MainTab() {
     </Tab.Navigator>
   );
 }
-
-export default MainTab;

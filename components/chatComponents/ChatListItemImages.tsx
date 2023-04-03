@@ -6,7 +6,7 @@ interface IChatListItemImages {
   UidList: string[];
 }
 
-function ChatListItemImages({ UidList }: IChatListItemImages) {
+export default function ChatListItemImages({ UidList }: IChatListItemImages) {
   const NN = 'https://via.placeholder.com/150/';
   const EE = '/000000';
   switch (UidList.length) {
@@ -36,5 +36,3 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
 });
-
-export default ChatListItemImages;

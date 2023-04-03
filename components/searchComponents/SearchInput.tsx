@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { View, TextInput } from 'react-native';
 import { useState } from 'react';
 
-function SearchInput() {
+export default function SearchInput() {
   const [text, onChangeText] = useState('');
   return (
     <View style={styles.container}>
@@ -30,7 +30,5 @@ const styles = StyleSheet.create({
     height: 40,
   },
 });
-
-export default SearchInput;
 
 // 맞다 키보드 올라오는거 문제해결하삼

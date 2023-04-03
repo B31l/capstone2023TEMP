@@ -12,7 +12,7 @@ interface IHomeListItem {
   isTerminated?: Boolean;
 }
 
-function HomeListItem({ title, UidList, latestDate, latestLog, isTerminated }: IHomeListItem) {
+export default function HomeListItem({ title, UidList, latestDate, latestLog, isTerminated }: IHomeListItem) {
   // 위 매개변수들은 요청한 id에 대한 response로 사용할 예정
   return (
     <View style={styles.container}>
@@ -81,5 +81,3 @@ const styles = StyleSheet.create({
     color: '#777',
   },
 });
-
-export default HomeListItem;

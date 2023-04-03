@@ -4,7 +4,7 @@ import { Pressable } from 'react-native';
 import HeaderWidget from './HeaderWidget';
 // import { useNavigation } from '@react-navigation/native';
 
-function SetClean() {
+export default function SetClean() {
   return (
     <Pressable
       onPress={() => {
@@ -14,5 +14,3 @@ function SetClean() {
     </Pressable>
   );
 }
-
-export default SetClean;

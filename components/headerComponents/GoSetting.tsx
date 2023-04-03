@@ -4,7 +4,7 @@ import { Pressable } from 'react-native';
 import HeaderWidget from './HeaderWidget';
 // import { useNavigation } from '@react-navigation/native';
 
-function GoSetting() {
+export default function GoSetting() {
   return (
     <Pressable
       onPress={() => {
@@ -14,5 +14,3 @@ function GoSetting() {
     </Pressable>
   );
 }
-
-export default GoSetting;

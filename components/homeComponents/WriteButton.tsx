@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-function WriteButton() {
+export default function WriteButton() {
   return (
     <View style={styles.container}>
       <Icon name="add" color="white" size={48} />
@@ -22,5 +22,3 @@ const styles = StyleSheet.create({
     height: 64,
   },
 });
-
-export default WriteButton;

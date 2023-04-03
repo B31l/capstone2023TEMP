@@ -7,7 +7,7 @@ import Postcode from '@actbase/react-daum-postcode';
 // https://github.com/actbase/react-daum-postcode
 // https://postcode.map.daum.net/guide#attributes
 
-function FindAddress() {
+export default function FindAddress() {
   const [isModal, setModal] = useState(false);
 
   const onSelected = (data: any) => {
@@ -55,5 +55,3 @@ const styles = StyleSheet.create({
     height: '100%',
   },
 });
-
-export default FindAddress;

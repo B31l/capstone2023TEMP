@@ -6,7 +6,7 @@ import SetAddressScreen from './Stacks/SetAddressScreen';
 
 const Stack = createNativeStackNavigator();
 
-function RootStack() {
+export default function RootStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="MainTab" component={MainTab} options={{ headerShown: false }} />
@@ -15,5 +15,3 @@ function RootStack() {
     </Stack.Navigator>
   );
 }
-
-export default RootStack;

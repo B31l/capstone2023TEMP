@@ -11,7 +11,7 @@ import Postcode from '@actbase/react-daum-postcode';
 // https://github.com/actbase/react-daum-postcode
 // https://postcode.map.daum.net/guide#attributes
 
-function GoAddress() {
+export default function GoAddress() {
   const [isModal, setModal] = useState(false);
   const [address, setAddress] = useState('');
   const onSelected = (data: any) => {
@@ -113,5 +113,3 @@ const localStyles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-export default GoAddress;

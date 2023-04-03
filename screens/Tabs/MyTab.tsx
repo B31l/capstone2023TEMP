@@ -7,7 +7,7 @@ import Header from '../../components/Header';
 import Profile from '../../components/myComponents/Profille';
 import MyOption from '../../components/myComponents/MyOption';
 
-function MyTab() {
+export default function MyTab() {
   return (
     <View>
       <Header tab="My" />
@@ -44,5 +44,3 @@ const my = StyleSheet.create({
     // backgroundColor: 'red',
   },
 });
-
-export default MyTab;

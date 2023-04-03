@@ -7,7 +7,7 @@ interface IHeaderWidget {
   iconName: string;
 }
 
-function HeaderWidget({ iconName }: IHeaderWidget) {
+export default function HeaderWidget({ iconName }: IHeaderWidget) {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={{ uri: iconName }} />
@@ -29,5 +29,3 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
-
-export default HeaderWidget;

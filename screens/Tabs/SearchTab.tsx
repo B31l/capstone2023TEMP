@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import styles from '../../styles/styles';
 import SearchInput from '../../components/searchComponents/SearchInput';
 
-function SearchTab() {
+export default function SearchTab() {
   return (
     <View style={styles.container}>
       <SearchInput />
@@ -11,5 +11,3 @@ function SearchTab() {
     </View>
   );
 }
-
-export default SearchTab;

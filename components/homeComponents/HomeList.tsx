@@ -30,7 +30,7 @@ const renderItem = ({ item }: IRenderItem) => {
   );
 };
 
-function HomeList() {
+export default function HomeList() {
   return (
     <View>
       <FlatList data={data} renderItem={renderItem} keyExtractor={(item) => String(item.id)} />
@@ -111,5 +111,3 @@ const data: IData[] = [
     isTerminated: true,
   },
 ];
-
-export default HomeList;

@@ -6,7 +6,7 @@ interface IHomeListItemImages {
   UidList: string[];
 }
 
-function HomeListItemImages({ UidList }: IHomeListItemImages) {
+export default function HomeListItemImages({ UidList }: IHomeListItemImages) {
   const NN = 'https://via.placeholder.com/150/';
   const EE = '/000000';
   switch (UidList.length) {
@@ -36,5 +36,3 @@ const styles = StyleSheet.create({
     // borderRadius: 16,
   },
 });
-
-export default HomeListItemImages;

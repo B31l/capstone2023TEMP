@@ -11,7 +11,7 @@ interface IHeader {
   tab: string;
 }
 
-function Header({ tab }: IHeader) {
+export default function Header({ tab }: IHeader) {
   switch (tab) {
     case 'Home':
       return (
@@ -94,5 +94,3 @@ const styles = StyleSheet.create({
     width: 8,
   },
 });
-
-export default Header;

@@ -12,7 +12,7 @@ interface IChatListItem {
   isTerminated?: Boolean;
 }
 
-function ChatListItem({ title, UidList, latestDate, latestLog, isTerminated }: IChatListItem) {
+export default function ChatListItem({ title, UidList, latestDate, latestLog, isTerminated }: IChatListItem) {
   // 위 매개변수들은 요청한 id에 대한 response로 사용할 예정
   return (
     <View style={styles.container}>
@@ -81,5 +81,3 @@ const styles = StyleSheet.create({
     color: '#777',
   },
 });
-
-export default ChatListItem;

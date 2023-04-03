@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 
 import FindAddress from '../../components/FindAddress';
 
-function SetAddressScreen() {
+export default function SetAddressScreen() {
   return (
     <View style={styles.container}>
       <Text>ㅎㅇ</Text>
@@ -13,5 +13,3 @@ function SetAddressScreen() {
     </View>
   );
 }
-
-export default SetAddressScreen;

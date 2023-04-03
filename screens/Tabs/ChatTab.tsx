@@ -5,7 +5,7 @@ import styles from '../../styles/styles';
 import Header from '../../components/Header';
 import ChatList from '../../components/chatComponents/ChatList';
 
-function ChatTab() {
+export default function ChatTab() {
   return (
     <>
       <Header tab="Chat" />
@@ -21,5 +21,3 @@ const cstyle = StyleSheet.create({
     paddingBottom: 80,
   },
 });
-
-export default ChatTab;

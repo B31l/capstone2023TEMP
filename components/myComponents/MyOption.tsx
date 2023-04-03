@@ -10,7 +10,7 @@ interface IMyOption {
   nav?: string;
 }
 
-function MyOption({ name, image, nav = 'LogInScreen' }: IMyOption) {
+export default function MyOption({ name, image, nav = 'LogInScreen' }: IMyOption) {
   const navigation = useNavigation();
   return (
     <Pressable
@@ -38,5 +38,3 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-
-export default MyOption;
