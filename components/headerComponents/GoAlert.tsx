@@ -10,7 +10,7 @@ export default function GoAlert() {
       onPress={() => {
         console.log('알람 창으로 이동');
       }}>
-      <HeaderWidget iconName="https://cdn.icon-icons.com/icons2/2346/PNG/512/bell_alarm_icon_142909.png" />
+      <HeaderWidget iconName="https://cdn.icon-icons.com/icons2/3887/PNG/512/bell_notification_icon_245900.png" />
     </Pressable>
   );
 }

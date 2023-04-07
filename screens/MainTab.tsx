@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import HomeTab from './Tabs/HomeTab';
 import ChatTab from './Tabs/ChatTab';
 import MyTab from './Tabs/MyTab';
-import SearchTab from './Tabs/SearchTab';
 
 interface IconProps {
   color: string;
@@ -35,9 +34,8 @@ export default function MainTab() {
 
   return (
     <Tab.Navigator initialRouteName="Home" screenOptions={screenOptions}>
-      <Tab.Screen name="Home" component={HomeTab} options={headerOptions('shopping-bag')} />
-      <Tab.Screen name="Search" component={SearchTab} options={headerOptions('search')} />
-      <Tab.Screen name="Chat" component={ChatTab} options={headerOptions('chat')} />
+      <Tab.Screen name="Home" component={HomeTab} options={headerOptions('shopping-cart')} />
+      <Tab.Screen name="Chat" component={ChatTab} options={headerOptions('forum')} />
       <Tab.Screen name="My" component={MyTab} options={headerOptions('person')} />
     </Tab.Navigator>
   );

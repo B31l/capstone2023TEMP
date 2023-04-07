@@ -18,6 +18,6 @@ export default function ChatTab() {
 
 const cstyle = StyleSheet.create({
   container: {
-    paddingBottom: 80,
+    paddingBottom: 48,
   },
 });

@@ -17,7 +17,11 @@ export default function HomeListItemImages({ UidList }: IHomeListItemImages) {
         </View>
       );
     default:
-      return <View>메롱</View>;
+      return (
+        <View style={styles.imageWrapper}>
+          <Image style={styles.image} source={{ uri: NN + UidList[0] + EE }} />
+        </View>
+      );
   }
   //   return (
   //     <View>
@@ -28,11 +32,12 @@ export default function HomeListItemImages({ UidList }: IHomeListItemImages) {
 
 const styles = StyleSheet.create({
   imageWrapper: {
-    marginRight: 8,
+    marginRight: 16,
+    borderWidth: 1,
   },
   image: {
     width: 108,
-    height: 144,
+    height: 108,
     // borderRadius: 16,
   },
 });

@@ -46,11 +46,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     height: 80,
-    borderWidth: 1,
+    borderBottomWidth: 1,
     borderColor: '#ccc',
     backgroundColor: 'white',
     borderRadius: 4,
-    padding: 8,
   },
   right: {
     flex: 1,

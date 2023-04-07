@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import { View, Text } from 'react-native';
 import GoAlert from './headerComponents/GoAlert';
 import GoCategories from './headerComponents/GoCategories';
+import GoSearch from './headerComponents/GoSearch';
 import GoAddress from './headerComponents/GoAddress';
 import GoSetting from './headerComponents/GoSetting';
 import SetClean from './headerComponents/SetClean';
@@ -18,8 +19,11 @@ export default function Header({ tab }: IHeader) {
         <View style={styles.container}>
           <View style={styles.wrapper}>
             <GoAddress />
+            <View style={styles.sep} />
+
             <View style={styles.widgetWrapper}>
-              <GoCategories />
+              {/* <GoCategories /> */}
+              <GoSearch />
               <View style={styles.sep} />
               <GoAlert />
             </View>
@@ -31,11 +35,11 @@ export default function Header({ tab }: IHeader) {
         <View style={styles.container}>
           <View style={styles.wrapper}>
             <Text style={styles.headerTitle}>채팅</Text>
-            <View style={styles.widgetWrapper}>
+            {/* <View style={styles.widgetWrapper}>
               <SetClean />
               <View style={styles.sep} />
               <GoAlert />
-            </View>
+            </View> */}
           </View>
         </View>
       );
@@ -66,9 +70,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     height: 80,
-    paddingTop: 48,
+    paddingTop: 32,
     paddingHorizontal: 16,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
   },
   wrapper: {
     flexDirection: 'row',
@@ -76,7 +80,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '100%',
-    // borderBottomWidth: 1,
     borderBottomColor: '#7286D3',
     backgroundColor: '#fff',
   },
@@ -88,9 +91,9 @@ const styles = StyleSheet.create({
   headerTitle: {
     color: '#4D4D4D',
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: '900',
   },
   sep: {
-    width: 8,
+    width: 16,
   },
 });

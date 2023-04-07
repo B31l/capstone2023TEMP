@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { View, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { View, Text, Image } from 'react-native';
 import HomeListItemImages from './HometListItemImages';
 
 interface IHomeListItem {
@@ -12,29 +11,28 @@ interface IHomeListItem {
   isTerminated?: Boolean;
 }
 
-export default function HomeListItem({ title, UidList, latestDate, latestLog, isTerminated }: IHomeListItem) {
+export default function HomeListItem({ title, UidList, latestDate, latestLog }: IHomeListItem) {
   // 위 매개변수들은 요청한 id에 대한 response로 사용할 예정
   return (
     <View style={styles.container}>
       <HomeListItemImages UidList={UidList} />
       <View style={styles.right}>
-        <View style={styles.rightChild}>
-          <View style={styles.titleWrapper}>
-            <Text style={styles.title}>{title}</Text>
-            <Text>{UidList.length}</Text>
-          </View>
-          <View style={styles.titleWrapper}>
-            <Text style={[styles.date, isTerminated ? styles.done : styles.do]}>{latestDate}</Text>
-
-            <Icon
-              name={isTerminated ? 'check-box' : 'check-box-outline-blank'}
-              size={24}
-              color={isTerminated ? '#777' : '#7286D3'}
-            />
-          </View>
+        <Text style={styles.title}>{title}</Text>
+        <Text>{latestDate}</Text>
+        <View style={styles.row}>
+          <Image
+            style={styles.image}
+            source={{ uri: 'https://cdn.icon-icons.com/icons2/3887/PNG/512/user_icon_245743.png' }}
+          />
+          <Text style={styles.length}>{UidList.length}인</Text>
         </View>
-        <View style={styles.rightChild}>
-          <Text>{latestLog}</Text>
+        <View style={styles.row}>
+          <Image
+            style={styles.image}
+            source={{ uri: 'https://cdn.icon-icons.com/icons2/3887/PNG/512/drawer_icon_245868.png' }}
+            resizeMode="contain"
+          />
+          <Text style={styles.length}>{latestLog}</Text>
         </View>
       </View>
     </View>
@@ -45,8 +43,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     width: '100%',
-    height: 160,
-    borderWidth: 1,
+    height: 128,
+    borderBottomWidth: 1,
     borderColor: '#ccc',
     backgroundColor: 'white',
     borderRadius: 4,
@@ -54,6 +52,7 @@ const styles = StyleSheet.create({
   },
   right: {
     flex: 1,
+    marginTop: 4,
   },
   rightChild: {
     flexDirection: 'row',
@@ -66,8 +65,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 18,
+    fontWeight: '900',
+    color: 'black',
     marginRight: 8,
   },
   date: {
@@ -79,5 +79,19 @@ const styles = StyleSheet.create({
   },
   done: {
     color: '#777',
+  },
+  image: {
+    width: 20,
+    height: 20,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 8,
+  },
+  length: {
+    fontSize: 16,
+    fontWeight: '900',
+    marginLeft: 4,
   },
 });

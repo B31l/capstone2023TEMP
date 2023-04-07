@@ -57,8 +57,8 @@ export default function GoAddress() {
         </View>
       </Modal>
       <Pressable style={localStyles.textWrapper} onPress={() => setModal(true)}>
-        <HeaderWidget iconName="https://cdn.icon-icons.com/icons2/2346/PNG/512/marker_placeholder_location_pin_icon_142928.png" />
-        <Text style={localStyles.text}>{address || '지역을 설정해주세요'}</Text>
+        <HeaderWidget iconName="https://cdn.icon-icons.com/icons2/3887/PNG/512/map_icon_245827.png" />
+        <Text style={localStyles.text}>{address || '여기가 어디죠...?'}</Text>
       </Pressable>
     </View>
   );
@@ -107,9 +107,9 @@ const localStyles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    marginLeft: 8,
+    marginLeft: 16,
     color: 'black',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 });
